@@ -12,6 +12,7 @@ public class RobotContainer {
     public static AHRS m_gyro = new AHRS(I2C.Port.kMXP);
     public static Drive m_drive = new Drive();
     public static NyaDS m_nyads = new NyaDS();
+    public static TextAuto m_auto = new TextAuto();
 
     // Controllers
     public static XboxController m_controller = new XboxController(0);
@@ -55,8 +56,9 @@ public class RobotContainer {
         SmartDashboard.putNumber("Turn kS", turnKS);
         SmartDashboard.putNumber("Turn kV", turnKV);
 
-        // Start NyaDS
-        m_nyads.start();
+        // Start NyaDS and TextAuto
+        //m_nyads.start();
+        m_auto.start();
     }
 
     public static void loop() {
