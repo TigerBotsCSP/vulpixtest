@@ -16,10 +16,10 @@ public class Drive {
     // ? Our four (expensive) motors
     // ! Change these channels!
     // * Public for testing (doesn't really matter though)
-    public final Module m_frontLeft = new Module(3, 6);
-    public final Module m_frontRight = new Module(7, 8);
-    public final Module m_backLeft = new Module(1, 30);
-    public final Module m_backRight = new Module(2, 31);
+    public final Module m_frontLeft = new Module(8, 7);
+    public final Module m_frontRight = new Module(30, 1);
+    public final Module m_backLeft = new Module(3, 6);
+    public final Module m_backRight = new Module(31, 2);
 
     // ? These limiters smooth out controls (lower = slower acceleration)
     private final SlewRateLimiter m_xLimiter = new SlewRateLimiter(3);
